@@ -1,28 +1,28 @@
 package com.skilldistillery.blackjack.casino;
+
 import com.skilldistillery.blackjack.cards.Card;
 
 import java.util.*;
 
-
 public abstract class Hand {
-	protected ArrayList <Card> cards = new ArrayList<>();
-	
+	protected ArrayList<Card> cards = new ArrayList<>();
+
 	public Hand() {
-		
+
 	}
-	
+
 	public void addCard(Card card) {
 		cards.add(card);
 	}
-	
-	public ArrayList <Card> getCards() {
+
+	public ArrayList<Card> getCards() {
 		return cards;
 	}
-	
+
 	public void clear() {
 		cards = null;
 	}
-	
+
 	public abstract int getHandValue();
 
 	@Override
@@ -32,6 +32,5 @@ public abstract class Hand {
 		builder.append(cards);
 		return builder.toString();
 	}
-	
-	
+
 }

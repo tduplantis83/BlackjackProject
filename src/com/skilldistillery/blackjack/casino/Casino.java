@@ -148,17 +148,17 @@ public class Casino {
 
 	private void displayFinalHand(Player p) {
 		if (p.equals(p1)) {
-			System.out.println(p1.getName() +"'s cards:");
+			System.out.println(p1.getName() + "'s cards:");
 			System.out.println(p1.getHand());
 			System.out.println("Your final hand value was " + p1.getHandValue());
 			System.out.println("---------------------------------------------------------------");
 			System.out.println("Dealer's cards:");
 			System.out.println(dealer.getHand());
-			System.out.println(dealer.getName() +"'s final hand value was " + dealer.getHandValue());
+			System.out.println(dealer.getName() + "'s final hand value was " + dealer.getHandValue());
 		} else {
-			System.out.println(dealer.getName() +"'s cards:");
+			System.out.println(dealer.getName() + "'s cards:");
 			System.out.println(dealer.getHand());
-			System.out.println(dealer.getName() +"'s final hand value was " + dealer.getHandValue());
+			System.out.println(dealer.getName() + "'s final hand value was " + dealer.getHandValue());
 			System.out.println("---------------------------------------------------------------");
 			System.out.println(p1.getName() + "'s cards:");
 			System.out.println(p1.getHand());

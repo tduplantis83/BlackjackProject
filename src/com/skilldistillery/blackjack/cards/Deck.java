@@ -14,8 +14,8 @@ public class Deck {
 				deck.add(new Card(s, r));
 			}
 		}
-		
-		//shuffles cards only once per game
+
+		// shuffles cards only once per game
 		shuffle();
 
 	}
@@ -25,7 +25,7 @@ public class Deck {
 	}
 
 	public Card dealCard() {
-		//return a random card from the (already shuffled) deck
+		// return a random card from the (already shuffled) deck
 		return deck.remove(0);
 	}
 

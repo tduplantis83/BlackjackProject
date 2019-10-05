@@ -1,15 +1,15 @@
 package com.skilldistillery.blackjack.cards;
 
 public class Card {
-	
+
 	private String suit;
 	private int rank;
-	
+
 	public Card(Suit s, Rank r) {
 		this.rank = r.getRank();
 		this.suit = s.toString();
 	}
-	
+
 	public int getValue() {
 		return this.rank;
 	}
@@ -50,6 +50,5 @@ public class Card {
 		builder.append(suit);
 		return builder.toString();
 	}
-	
-	
+
 }

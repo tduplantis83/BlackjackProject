@@ -5,11 +5,15 @@ Course Began: 9/9/19
 
 Assigned: 10/4/19
 
-Completed:
+Completed: 10/4/19
 
 
 ### Overview
+A simple blackjack game. The player enters their name and play begins. The player is dealt & shown a card. Next, the dealer is dealt a card, but it is kept hidden. The player gets their second card, and then the dealer receives theirs, which the player can see.
 
+If neither player busts or wins on their first hand, then play continues. At this point, the player can choose to hit until they reach 21, bust, or choose to stay. The dealer will continue to hit as long as his hand is below 17.
+
+If neither player has busted by this point, the game is shown as a tie, win, or loss. At this point, the player has the choice to play again.
 
 ### How to run
 This is a console app:
@@ -33,25 +37,17 @@ This is a console app:
     *ArrayList
 7. Arrays
 8. Primitive data types:
-  *double
   *boolean
   *int
   *String
+  *char
 
 9. Non-Primitive types:
   *Wrapper Classes
   *Objects
-  *Interfaces
+  *Enum
 
-10. Conversions:
-  *implicit
-  *explicit
-  *promotions
-
-11. Exceptions
-  *Try/Catch/Finally
-
-12. loops:
+11. loops:
   *do while
   *for
   *for each
@@ -60,12 +56,10 @@ This is a console app:
   *if/else if/else
 
 14. arithmetic/calculations
+
 15. Methods:
   *Overloads
   *Overrides
 
-
 ### Lessons Learned
-As with the other projects so far, this one reinforced the importance of planning before coding. Taking time to think through the application, create even a basic UML diagram, and stubbing out classes and methods, saves a great deal of time overall.
-
-In the future, I would like to begin learning and utilizing Test Driven Development very intensely, in an effort to save time, while also making future modifications simpler.  
+With this project I took more time upfront to plan out each object; unfortunately, I initially over-planned and overcomplicated things. This led me to take a step back and simplify. In the future, I will plan, while keeping things reasonably simple. 
