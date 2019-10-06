@@ -27,7 +27,7 @@ public class Deck {
 	public Card dealCard() {
 		// return a random card from the (already shuffled) deck
 		return deck.remove(0);
-		
+
 	}
 
 	public void shuffle() {

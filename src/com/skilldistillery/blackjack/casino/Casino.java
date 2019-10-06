@@ -100,7 +100,7 @@ public class Casino {
 				} else if (choice == 'S') {
 					break;
 				} else {
-					System.err.println("\nERROR - Invalid Input. Please choose H or S.");
+					System.err.println("\nERROR - Invalid Input. Please choose H or S.\n");
 					choice = 'H';
 				}
 			}

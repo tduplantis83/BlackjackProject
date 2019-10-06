@@ -4,14 +4,26 @@ public class Card {
 
 	private String suit;
 	private int rank;
+	private String rankName;
+	private int softValue;
 
 	public Card(Suit s, Rank r) {
 		this.rank = r.getRank();
 		this.suit = s.toString();
+		this.rankName = r.getRankName();
+		this.softValue = r.getSoftRank();
 	}
 
 	public int getValue() {
 		return this.rank;
+	}
+	
+	public String getRankName() {
+		return this.rankName;
+	}
+	
+	public int getSoftValue() {
+		return this.softValue;
 	}
 
 	@Override
@@ -45,9 +57,15 @@ public class Card {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append(rank);
+		builder.append(rankName);
 		builder.append(" of ");
 		builder.append(suit);
+		builder.append(" (worth: ");
+		builder.append(rank);
+		if(softValue != 0) {
+			builder.append("/" + softValue);
+		}
+		builder.append(")");
 		return builder.toString();
 	}
 

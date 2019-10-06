@@ -20,25 +20,25 @@ public class Player {
 		if (type.equalsIgnoreCase("Human")) {
 			System.out.println("Your hand is worth " + b.getHandValue());
 
-//			//check for hard/soft ace
-//			if(b.isHardAce()) {
-//				System.out.println("Hard Ace(s) - your Ace only be worth 1.");
-//			}
-//			if(b.isSoftAce()) {
-//				System.out.println("Soft Ace(s) - your Ace be worth 1 or 11");
-//			}
+			//check for hard/soft ace
+			if(b.isHardAce()) {
+				System.out.println("Hard Ace - your Ace only be worth 1.");
+			}
+			if(b.isSoftAce()) {
+				System.out.println("Soft Ace - your Ace be worth 11");
+			}
 			System.out.print("Hit or Stay (H/S)?");
 			c = s.next().toUpperCase().charAt(0);
 		}
 		// dealer
 		else {
-			if (this.b.getHandValue() < 17) {
+			if (this.b.getHandValue() == 17 && b.isSoftAce()) {
+				System.out.println("Dealer hits on soft 17");
 				c = 'H';
 			}
-//				else if (this.b.getHandValue() == 17 && b.isSoftAce()) {
-//				System.out.println("Dealer hits on soft 17");
-//				c = 'H';
-//			}
+			else if (this.b.getHandValue() < 17) {
+				c = 'H';
+			}
 			else {
 				c = 'S';
 			}
@@ -78,6 +78,10 @@ public class Player {
 		c = this.b.getCards();
 
 		for (int i = 1; i < c.size(); i++) {
+			if(c.get(i).getRankName().equalsIgnoreCase("Ace")) {
+				System.out.println("**CAUTION: Dealer has an Ace**");
+				System.out.println("**Displayed vs Actual hand value will vary**");
+			}
 			sum += c.get(i).getValue();
 		}
 
