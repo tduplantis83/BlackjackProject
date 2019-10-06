@@ -97,6 +97,11 @@ public class Casino {
 					} else if (p1Bust) {
 						break;
 					}
+				} else if (choice == 'S') {
+					break;
+				} else {
+					System.err.println("\nERROR - Invalid Input. Please choose H or S.");
+					choice = 'H';
 				}
 			}
 		}
@@ -177,7 +182,8 @@ public class Casino {
 		} else {
 			bust = dealer.bust();
 			if (bust) {
-				System.out.println("BUST " + dealer.getName() + "...you lost.");
+				System.out.println("BUST " + dealer.getName() + " lost.");
+				System.out.println(p1.getName() + ", You WON!!");
 				displayFinalHand(dealer);
 			}
 		}
@@ -196,7 +202,8 @@ public class Casino {
 		} else {
 			b = dealer.blackjack();
 			if (b) {
-				System.out.println(dealer.getName() + " you WON!!!");
+				System.out.println(p1.getName() + "...you lost.");
+				System.out.println(dealer.getName() + " won.");
 				displayFinalHand(dealer);
 			}
 		}
@@ -242,17 +249,13 @@ public class Casino {
 	}
 
 	private char userChoice(char deal) {
-		do {
-			switch (deal) {
-			case 'H':
-				return deal;
-			case 'S':
-				return deal;
-			default:
-				System.err.println("\nERROR - Invalid Input. Please choose H or S.");
-				break;
-			}
-		} while (deal != 'H' || deal != 'S');
+
+		switch (deal) {
+		case 'H':
+			return deal;
+		case 'S':
+			return deal;
+		}
 
 		return deal;
 	}

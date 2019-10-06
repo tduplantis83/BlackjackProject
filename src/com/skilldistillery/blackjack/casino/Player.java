@@ -19,6 +19,14 @@ public class Player {
 		char c;
 		if (type.equalsIgnoreCase("Human")) {
 			System.out.println("Your hand is worth " + b.getHandValue());
+
+//			//check for hard/soft ace
+//			if(b.isHardAce()) {
+//				System.out.println("Hard Ace(s) - your Ace only be worth 1.");
+//			}
+//			if(b.isSoftAce()) {
+//				System.out.println("Soft Ace(s) - your Ace be worth 1 or 11");
+//			}
 			System.out.print("Hit or Stay (H/S)?");
 			c = s.next().toUpperCase().charAt(0);
 		}
@@ -26,11 +34,16 @@ public class Player {
 		else {
 			if (this.b.getHandValue() < 17) {
 				c = 'H';
-			} else {
+			}
+//				else if (this.b.getHandValue() == 17 && b.isSoftAce()) {
+//				System.out.println("Dealer hits on soft 17");
+//				c = 'H';
+//			}
+			else {
 				c = 'S';
 			}
 		}
-		System.out.println();
+
 		return c;
 
 	};
