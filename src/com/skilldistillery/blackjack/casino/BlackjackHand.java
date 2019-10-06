@@ -32,8 +32,13 @@ public class BlackjackHand extends Hand {
 			}
 		}
 		
-		if(isHardAce()) {
-			sum -= (countOfAces * 10);
+		//sum over 21 / isHardAce = true
+		if(isHardAce() && countOfAces == 1) {
+			sum -= 10;
+		}
+		//if more than 1 ace, only 1 counts as an 11
+		else if(isHardAce() && countOfAces > 1) {
+			sum -= ((countOfAces - 1) * 10);
 		}
 
 		return sum;
